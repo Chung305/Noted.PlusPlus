@@ -1,20 +1,24 @@
 package com.Noted.NoteddPlusPlus.models;
 
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Date;
 
 public class Note {
     @Id
-    @GeneratedValue()
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    private String category;
-    private String desciption;
+    private String description;
     private Date date;
 
     public Note(){
 
+    }
+
+    public Note(String description, Date date) {
+        this.description = description;
+        this.date = date;
     }
 
     public Long getId() {
@@ -25,20 +29,12 @@ public class Note {
         this.id = id;
     }
 
-    public String getCategory() {
-        return category;
+    public String getDescription() {
+        return description;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public String getDesciption() {
-        return desciption;
-    }
-
-    public void setDesciption(String desciption) {
-        this.desciption = desciption;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Date getDate() {
