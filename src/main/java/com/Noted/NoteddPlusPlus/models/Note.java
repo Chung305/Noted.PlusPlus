@@ -10,11 +10,28 @@ public class Note {
     private Long id;
 
     private String category;
-    private String desciption;
+    private String title;
+    private String description;
     private Date date;
 
     public Note(){
 
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Long getId() {
@@ -31,14 +48,6 @@ public class Note {
 
     public void setCategory(String category) {
         this.category = category;
-    }
-
-    public String getDesciption() {
-        return desciption;
-    }
-
-    public void setDesciption(String desciption) {
-        this.desciption = desciption;
     }
 
     public Date getDate() {
