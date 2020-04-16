@@ -16,7 +16,9 @@ public class NoteTest {
         Date date = new Date();
 
         //when
-        Note newNote = new Note(description, date);
+        Note newNote = new Note();
+        newNote.setDescription(description);
+        newNote.setDate(date);
 
         //when
         Assert.assertEquals(description, newNote.getDescription());

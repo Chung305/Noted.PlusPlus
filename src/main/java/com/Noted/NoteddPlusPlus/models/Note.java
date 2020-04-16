@@ -9,16 +9,14 @@ public class Note {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    private String category;
+    private String title;
     private String description;
     private Date date;
 
     public Note(){
 
-    }
-
-    public Note(String description, Date date) {
-        this.description = description;
-        this.date = date;
     }
 
     public Long getId() {
@@ -27,6 +25,22 @@ public class Note {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getDescription() {
